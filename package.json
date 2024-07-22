@@ -4,6 +4,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
+    "e2e": "jest && npm publish",
     "test": "jest"
   },
   "author": "",

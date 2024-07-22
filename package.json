@@ -1,6 +1,6 @@
 {
   "name": "br-national-services",
-  "version": "1.0.19",
+  "version": "1.0.21",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {

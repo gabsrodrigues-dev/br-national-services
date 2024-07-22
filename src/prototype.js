@@ -1,6 +1,7 @@
 const { br } = require('./');
 
-String.prototype.format = function(type) {
+// Adicionando métodos ao protótipo de String
+String.prototype.brFormat = function(type) {
   if (type === 'cpf') {
     return br.format.cpf(this);
   } else if (type === 'phone') {
@@ -11,7 +12,7 @@ String.prototype.format = function(type) {
   throw new Error('Unsupported format type');
 };
 
-String.prototype.parse = function(type) {
+String.prototype.brParse = function(type) {
   if (type === 'phone') {
     return br.parse.phone(this);
   } else if (type === 'currency') {
@@ -20,7 +21,7 @@ String.prototype.parse = function(type) {
   throw new Error('Unsupported parse type');
 };
 
-String.prototype.validate = function(type) {
+String.prototype.brValidate = function(type) {
   if (type === 'cpf') {
     return br.validate.cpf(this);
   } else if (type === 'email') {
@@ -29,7 +30,8 @@ String.prototype.validate = function(type) {
   throw new Error('Unsupported validate type');
 };
 
-Number.prototype.format = function(type) {
+// Adicionando métodos ao protótipo de Number
+Number.prototype.brFormat = function(type) {
   if (type === 'currency') {
     return br.format.currency(this);
   }

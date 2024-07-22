@@ -1,17 +1,29 @@
-declare module 'br-national-services' {
-  function verifyCPF(cpf: string): boolean;
-  function validateEmail(email: string): boolean;
-  function formatToCurrency(number: number): string;
-  function parseCurrencyToNumber(currency: string): number;
-  function formatPhoneNumber(number: string): string;
-  function parsePhoneNumber(formatted: string): string;
+declare module 'br-national-services/src/prototype' {
+  interface String {
+    format(type: 'cpf' | 'phone' | 'currency'): string;
+    validate(type: 'cpf' | 'email'): boolean;
+    parse(type: 'phone' | 'currency'): number;
+  }
 
-  export { 
-    verifyCPF, 
-    validateEmail,
-    formatToCurrency,
-    parseCurrencyToNumber,
-    formatPhoneNumber,
-    parsePhoneNumber
+  interface Number {
+    format(type: 'currency'): string;
+  }
+}
+
+declare module 'br-national-services/src/' {
+  export const br: {
+    validate: {
+      cpf: (cpf: string) => boolean;
+      email: (email: string) => boolean;
+    };
+    format: {
+      currency: (number: number) => string;
+      phone: (number: string) => string;
+      cpf: (cpf: string) => string;
+    };
+    parse: {
+      currency: (currency: string) => number;
+      phone: (formatted: string) => string;
+    };
   };
 }

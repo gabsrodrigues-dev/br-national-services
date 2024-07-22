@@ -8,7 +8,8 @@ const br = {
   },
   format: {
     currency: utils.formatToCurrency,
-    phone: utils.formatPhoneNumber
+    phone: utils.formatPhoneNumber,
+    cpf: utils.formatCPF
   },
   parse: {
     currency: utils.parseCurrencyToNumber,

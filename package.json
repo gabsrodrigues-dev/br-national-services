@@ -1,15 +1,15 @@
 {
   "name": "br-national-services",
-  "version": "1.0.23",
+  "version": "1.1",
+  "description": "Easy Brazilian Services. Easy to use.",
   "main": "index.js",
   "types": "src/index.d.ts",
   "scripts": {
-    "e2e": "jest && npm publish",
-    "test": "jest"
+    "test": "jest",
+    "e2e": "jest && npm publish"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Gabriel Rodrigues",
+  "license": "MIT",
   "devDependencies": {
     "jest": "^29.7.0"
   }

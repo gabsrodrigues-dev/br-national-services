@@ -82,6 +82,18 @@ const number = 1250.52;
 console.log(number.brFormat("currency")); // Outputs: R$ 1.250,52
 ```
 
+#### Utils.generateCPF()
+
+Generates a random valid CPF.
+
+```javascript
+const { generateCPF } = require('br-national-services');
+
+const newCPF = generateCPF();
+console.log(`Generated CPF: ${newCPF}`); // Outputs a valid CPF, e.g., 12345678909
+```
+
+
 ### Tests
 
 To run the tests, use the following command:

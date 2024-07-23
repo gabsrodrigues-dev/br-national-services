@@ -8,6 +8,10 @@ declare global {
   interface Number {
     brFormat(type: 'currency'): string;
   }
+
+  interface Utils {
+    generateCPF(): string;
+  }
 }
 
 export {};
